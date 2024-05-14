@@ -20,7 +20,7 @@ An overview of the Angular framework.
 **angular.json**\
 Angular CLI configuration. Includes configuration options for build, serve, and test tools that the CLI uses, such as [Karma](https://karma-runner.github.io/latest/index.html), and [Protractor](https://www.protractortest.org/#/). For details, see [Angular Workspace Configuration](https://angular.io/guide/workspace-config).
 
-## Things from Older Versions of Angular
+## Things from Older Versions of Angular (Overview)
 
 _If you want to learn the specifics differences with the older versions of Angular,_
 \*visit the [v9 angular learning project](https://github.com/NaspoDev/Learning-Projects-VsCode/tree/main/WebDev_Learning/Angular_Learning/old-angular-learning-v9).

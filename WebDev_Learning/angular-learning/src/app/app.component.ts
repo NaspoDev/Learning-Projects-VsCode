@@ -18,10 +18,14 @@ import { ListItem } from './list/list-item.model';
 // It's convention to have the word "Component" in the class name as well.
 export class AppComponent {
   // You can define variable's here, and use them in the html file.
-  title = 'This is my super cool title!';
+  title: string = 'This is my super cool title!';
   cars: ListItem[] = [
     { name: 'Hyundai Sonata', description: 'Sedan' },
     { name: 'Toyota Camry', description: 'Sedan' },
     { name: 'G-Wagon', description: 'idek brother (SUV?)' },
   ];
+
+  // Using these variables to test conditional rendering
+  a: number = 10;
+  b: number = 7;
 }

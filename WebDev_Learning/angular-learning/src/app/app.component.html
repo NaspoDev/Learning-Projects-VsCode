@@ -2,3 +2,17 @@
 <h2>Check out my title: {{ title }}</h2>
 <!-- Defining my list component, and passing in my list of cars as the prop -->
 <app-list [items]="cars"></app-list>
+
+<!-- Conditional rendering -->
+@if (a > b) {
+<p>a is greater than b!</p>
+} @else {
+<p>b is greater than a!</p>
+}
+<!-- OLD Syntax -->
+<!-- 
+  <p *ngIf="a > b; else elseBlock">
+  a is greater than b!
+</p>
+<ng-template #elseBlock>b is greater than a!</ng-template> 
+-->

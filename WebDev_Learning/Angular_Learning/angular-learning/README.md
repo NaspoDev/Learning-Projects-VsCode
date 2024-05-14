@@ -22,6 +22,9 @@ Angular CLI configuration. Includes configuration options for build, serve, and 
 
 ## Things from Older Versions of Angular
 
+_If you want to learn the specifics differences with the older versions of Angular,_
+\*visit the [v9 angular learning project](https://github.com/NaspoDev/Learning-Projects-VsCode/tree/main/WebDev_Learning/Angular_Learning/old-angular-learning-v9).
+
 Angular has changed a fair amount over the years. In case you find yourself working\
 with older versions of Angular, maybe at a job, here are some things you might see.
 

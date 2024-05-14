@@ -1,9 +1,13 @@
-# Learning Old Angular (v 9.0.0)
+# Learning Old Angular (v9.0.0)
 
 An overview of an older version of the Angular framework.
 
+**Why a separate learning project for old Angular?**\
 Since Angular has changed substantially over the years, and most companies are still using older versions of Angular, it's important to understand the older versions of Angular.\
 The differences between the versions are substantial enough to make a seperate learing project for this version.
+
+**NOTE: PARTIAL TUTORIAL!**\
+This a partial tutorial only covering the specific differences in the old versions from the new ones. Learn about the angular basics from the [modern angular-learning project](https://github.com/NaspoDev/Learning-Projects-VsCode/tree/main/WebDev_Learning/Angular_Learning/angular-learning).
 
 ## Project Structure
 

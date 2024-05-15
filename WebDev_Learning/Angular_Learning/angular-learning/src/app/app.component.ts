@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { ListComponent } from './list/list.component';
 import { ListItem } from './list/list-item.model';
+import { DatabaseService } from './services/database.service';
 
 // The App component
 
@@ -19,13 +20,17 @@ import { ListItem } from './list/list-item.model';
 export class AppComponent {
   // You can define variable's here, and use them in the html file.
   title: string = 'This is my super cool title!';
-  cars: ListItem[] = [
-    { name: 'Hyundai Sonata', description: 'Sedan' },
-    { name: 'Toyota Camry', description: 'Sedan' },
-    { name: 'G-Wagon', description: 'idek brother (SUV?)' },
-  ];
+  cars: ListItem[];
 
   // Using these variables to test conditional rendering
   a: number = 10;
   b: number = 7;
+
+  // Dependency injection.
+  // The angular injector will see that this class needs a DatabaseService, and inject it automatically.
+  // Also note that in Typescript, when you define a variable like this in the constructor with the private keyword,
+  // it will automatically make a property with that type and name, and assign the parameter value to that property.
+  constructor(private database: DatabaseService) {
+    this.cars = database.getCarsList();
+  }
 }

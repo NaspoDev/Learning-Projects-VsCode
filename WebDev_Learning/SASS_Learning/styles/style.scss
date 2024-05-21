@@ -7,23 +7,25 @@
 // Variables
 $sassy-red: rgb(236, 93, 193);
 $my-blue: rgb(108, 108, 173);
+$example-height: 300px;
 
 // Mixins are like functions for CSS, they can take arguments, and they can be reused to apply the same styles to different elements.
 // Mixins are defined with @mixin and called with @include
-// params are optional
-@mixin flexCenter($direction) {
+// params are optional, and can have default values.
+@mixin displayFlex($direction: row, $justify: center, $align: center) {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
 }
 
 // Indentation at work...
 .container {
   width: 300px;
-  height: 300px;
+  // If you want to use calc with scss variables, you need to interpolate them first with #{}
+  height: calc(#{$example-height} + 100px);
   background-color: lightblue;
-  @include flexCenter(column);
+  @include displayFlex(column);
 
   h1 {
     color: $sassy-red;

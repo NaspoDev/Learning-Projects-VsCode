@@ -1,4 +1,8 @@
-# Welcome to your Expo app 👋
+# Learning React Native (with Expo)
+
+This is the default Expo example project.\
+It showcases a lot of the ways you can use React Native, so I'm going to use it as my learning project.\
+I'm going to dive deep into it and document things everywhere to understand how it works.
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 

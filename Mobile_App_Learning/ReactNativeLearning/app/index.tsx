@@ -9,6 +9,7 @@ import {
   Button,
   Image,
   TouchableHighlight,
+  Alert,
 } from "react-native";
 
 export default function Index() {
@@ -30,7 +31,7 @@ export default function Index() {
       <Button
         title={imageHidden ? "Reveal Image" : "Hide Image"}
         onPress={handleButtonClick}
-      ></Button>
+      />
       <Image
         source={require("../assets/images/landscape.jpg")}
         style={styles.image}
@@ -48,24 +49,64 @@ export default function Index() {
         </View>
       </TouchableHighlight>
 
-      {/* The alert() function: displays a default alert popup. */}
-      <Button title="Try alerts!" onPress={() => alert("This is an alert!")} />
+      {/* Alerts! Using the alert API to send native alerts */}
+      {/* Multiple style objects can be applied by passing them as a list. (Last one takes precedent) */}
+      <View style={[styles.alertsContainer, styles.borderPurple]}>
+        <Text>Alerts:</Text>
+        {/* Basic Alert */}
+        <Button
+          title="Try a basic alert"
+          onPress={() => alert("This is an alert!")}
+        />
+        {/* Customized alert with feedback */}
+        <Button
+          title="Customized alert with feedback"
+          onPress={() =>
+            // Using the Alert object form react-native.
+            Alert.alert("My Alert Title", "My alert message", [
+              // These are alert buttons
+              { text: "Yes", onPress: () => console.log("Yes option pressed") },
+              { text: "No", onPress: () => console.log("No option pressed") },
+            ])
+          }
+        />
+        {/* Prompt alert (text input) IOS ONLY */}
+        <Button
+          title="Prompt alert (text input) IOS ONLY"
+          onPress={() =>
+            Alert.prompt("Enter something", "Enter a message or sum", (input) =>
+              console.log(input)
+            )
+          }
+        />
+      </View>
     </SafeAreaView>
   );
 }
 
 // We can define our styles like so, and apply them as needed.
+// Style property names are inspired by CSS, but they are not CSS.
 const styles = StyleSheet.create({
   container: {
     display: "flex",
     width: "100%",
-    height: "50%",
+    height: "auto",
     backgroundColor: "lightblue",
     // SafeAreaView has troubles on android, so this is the workaround.
     paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
   },
   image: {
     width: "80%",
-    height: "50%",
+    height: 200,
+  },
+  alertsContainer: {
+    marginTop: 20,
+    gap: 10,
+    height: "auto",
+    paddingVertical: 20,
+  },
+  borderPurple: {
+    borderWidth: 2,
+    borderColor: "#9C188C",
   },
 });

@@ -1,5 +1,8 @@
 import { Stack } from "expo-router";
 
+// This is the entry point to our application.
+// The entry point to Expo React-Native applications is always app/_layout.tsx.
+
 // Routing in React Native with Expo.
 export default function RootLayout() {
   return (
